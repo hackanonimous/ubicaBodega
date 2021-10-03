@@ -1,3 +1,7 @@
+-- nobre de la base de datos deberara ser "ubicaBodega"
+
+
+
 CREATE TABLE `areas` (
   `id` int(30) NOT NULL,
   `area` text NOT NULL,
