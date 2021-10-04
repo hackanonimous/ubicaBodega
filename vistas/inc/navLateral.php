@@ -16,16 +16,16 @@
 				</li>
 
 				<li>
-					<a href="#" class="nav-btn-submenu"><i class="fas fa-map-marked-alt fa-fw"></i> &nbsp; Areas <i class="fas fa-chevron-down"></i></a>
+					<a href="#" class="nav-btn-submenu"><i class="fas fa-map-marked-alt fa-fw"></i> &nbsp; Zonas <i class="fas fa-chevron-down"></i></a>
 					<ul>
 						<li>
-							<a href="<?php echo SERVERURL;?>areaNew/"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar item</a>
+							<a href="<?php echo SERVERURL;?>zonaNew/"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar zona</a>
 						</li>
 						<li>
-							<a href="<?php echo SERVERURL;?>areaList/"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de items</a>
+							<a href="<?php echo SERVERURL;?>zonaList/"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de zonas</a>
 						</li>
 						<li>
-							<a href="<?php echo SERVERURL;?>areaSearch/"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar item</a>
+							<a href="<?php echo SERVERURL;?>zonaSearch/"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar zona</a>
 						</li>
 					</ul>
 				</li>
