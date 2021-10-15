@@ -60,6 +60,16 @@
 										<input type="text" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,#\- ]{1,190}" class="form-control" name="usuario_direccion_reg" id="usuario_direccion" maxlength="190">
 									</div>
 								</div>
+								<div class="col-12 col-md-6">
+									<div class="form-group">
+										<label for="item_estado" class="bmd-label-floating">Estado</label>
+										<select class="form-control" name="item_estado_reg" id="item_estado">
+											<option value="" selected="" disabled="">Seleccione una opción</option>
+											<option value="Habilitado">Habilitado</option>
+											<option value="Deshabilitado">Deshabilitado</option>
+										</select>
+									</div>
+								</div>
 							</div>
 						</div>
 					</fieldset>

@@ -1,24 +1,24 @@
             <!-- Page header -->
             <div class="full-box page-header">
             	<h3 class="text-left">
-            		<i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE ITEMS
+            		<i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE REPRESENTANTES
             	</h3>
             	<p class="text-justify">
-            		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum delectus eos enim numquam fugit optio accusantium, aperiam eius facere architecto facilis quibusdam asperiores veniam omnis saepe est et, quod obcaecati.
+            		La siguiente tabla nos mostrara a todos los representantes de los negocios que hemos registrado y podremos actualizarlos o eliminarlos.
             	</p>
             </div>
 
             <div class="container-fluid">
             	<ul class="full-box list-unstyled page-nav-tabs">
             		<li>
-            			<a href="item-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR ITEM</a>
-            		</li>
-            		<li>
-            			<a class="active" href="item-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE ITEMS</a>
-            		</li>
-            		<li>
-            			<a href="item-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR ITEM</a>
-            		</li>
+                        <a href="<?php echo SERVERURL;?>representanteNew/"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR REPRESENTANTE</a>
+                    </li>
+                    <li>
+                        <a class="active" href="<?php echo SERVERURL;?>representanteList/"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE REPRESENTANTES</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo SERVERURL;?>representanteSearch/"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR REPRESENTANTE</a>
+                    </li>
             	</ul>
             </div>
             

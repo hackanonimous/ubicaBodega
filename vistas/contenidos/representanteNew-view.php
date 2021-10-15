@@ -31,37 +31,39 @@
 							<div class="row">
 								<div class="col-12 col-md-4">
 									<div class="form-group">
-										<label for="item_codigo" class="bmd-label-floating">Códido</label>
+										<label for="item_codigo" class="bmd-label-floating">Dni</label>
 										<input type="text" pattern="[a-zA-Z0-9-]{1,45}" class="form-control" name="item_codigo_reg" id="item_codigo" maxlength="45">
 									</div>
 								</div>
 								
 								<div class="col-12 col-md-4">
 									<div class="form-group">
-										<label for="item_nombre" class="bmd-label-floating">Nombre</label>
+										<label for="item_nombre" class="bmd-label-floating">Nombres</label>
 										<input type="text" pattern="[a-zA-záéíóúÁÉÍÓÚñÑ0-9 ]{1,140}" class="form-control" name="item_nombre_reg" id="item_nombre" maxlength="140">
 									</div>
 								</div>
 								<div class="col-12 col-md-4">
 									<div class="form-group">
-										<label for="item_stock" class="bmd-label-floating">Stock</label>
+										<label for="item_nombre" class="bmd-label-floating">Apellidos</label>
+										<input type="text" pattern="[a-zA-záéíóúÁÉÍÓÚñÑ0-9 ]{1,140}" class="form-control" name="item_nombre_reg" id="item_nombre" maxlength="140">
+									</div>
+								</div>
+								<div class="col-12 col-md-4">
+									<div class="form-group">
+										<label for="item_stock" class="bmd-label-floating">Telefono</label>
 										<input type="num" pattern="[0-9]{1,9}" class="form-control" name="item_stock_reg" id="item_stock" maxlength="9">
 									</div>
 								</div>
-								<div class="col-12 col-md-6">
+								<div class="col-12 col-md-4">
 									<div class="form-group">
-										<label for="item_estado" class="bmd-label-floating">Estado</label>
-										<select class="form-control" name="item_estado_reg" id="item_estado">
-											<option value="" selected="" disabled="">Seleccione una opción</option>
-											<option value="Habilitado">Habilitado</option>
-											<option value="Deshabilitado">Deshabilitado</option>
-										</select>
+										<label for="item_nombre" class="bmd-label-floating">Direccion</label>
+										<input type="text" pattern="[a-zA-záéíóúÁÉÍÓÚñÑ0-9 ]{1,140}" class="form-control" name="item_nombre_reg" id="item_nombre" maxlength="140">
 									</div>
 								</div>
-								<div class="col-12 col-md-6">
+								<div class="col-12 col-md-4">
 									<div class="form-group">
-										<label for="item_detalle" class="bmd-label-floating">Detalle</label>
-										<input type="text" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,#\- ]{1,190}" class="form-control" name="item_detalle_reg" id="item_detalle" maxlength="190">
+										<label for="usuario_email" class="bmd-label-floating">Email</label>
+										<input type="email" class="form-control" name="usuario_email_reg" id="usuario_email" maxlength="70">
 									</div>
 								</div>
 							</div>
