@@ -1,23 +1,23 @@
             <!-- Page header -->
             <div class="full-box page-header">
                 <h3 class="text-left">
-                    <i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR ITEM
+                    <i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR REPRESENTANTE
                 </h3>
                 <p class="text-justify">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum delectus eos enim numquam fugit optio accusantium, aperiam eius facere architecto facilis quibusdam asperiores veniam omnis saepe est et, quod obcaecati.
+                    Realiza la busqueda por numero de dni nombre o apellido.
                 </p>
             </div>
 
             <div class="container-fluid">
                 <ul class="full-box list-unstyled page-nav-tabs">
                     <li>
-                        <a href="item-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR ITEM</a>
+                        <a href="<?php echo SERVERURL;?>representanteNew/"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR REPRESENTANTE</a>
                     </li>
                     <li>
-                        <a href="item-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE ITEMS</a>
+                        <a href="<?php echo SERVERURL;?>representanteList/"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE REPRESENTANTES</a>
                     </li>
                     <li>
-                        <a class="active" href="item-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR ITEM</a>
+                        <a class="active" href="<?php echo SERVERURL;?>representanteSearch/"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR REPRESENTANTE</a>
                     </li>
                 </ul>
             </div>
@@ -29,7 +29,7 @@
                         <div class="row justify-content-md-center">
                             <div class="col-12 col-md-6">
                                 <div class="form-group">
-                                    <label for="inputSearch" class="bmd-label-floating">¿Qué item estas buscando?</label>
+                                    <label for="inputSearch" class="bmd-label-floating">¿Qué Representante estas buscando?</label>
                                     <input type="text" class="form-control" name="busqueda-" id="inputSearch" maxlength="30">
                                 </div>
                             </div>
@@ -69,10 +69,12 @@
                         <thead>
                             <tr class="text-center roboto-medium">
                                 <th>#</th>
-                                <th>CÓDIGO</th>
+                                <th>DNI</th>
                                 <th>NOMBRE</th>
-                                <th>STOCK</th>
-                                <th>DETALLE</th>
+                                <th>APELLIDO</th>
+                                <th>TELÉFONO</th>
+                                <th>EMAIL</th>
+                                <th>DIRECCION</th>
                                 <th>ACTUALIZAR</th>
                                 <th>ELIMINAR</th>
                             </tr>
@@ -80,16 +82,18 @@
                         <tbody>
                             <tr class="text-center" >
                                 <td>1</td>
-                                <td>012342567</td>
-                                <td>NOMBRE DEL ITEM</td>
-                                <td>20</td>
+                                <td>03045643</td>
+                                <td>NOMBRE DE USUARIO</td>
+                                <td>APELLIDO DE USUARIO</td>
+                                <td>2345456</td>
+                                <td>ADMIN@ADMIN.COM</td>
                                 <td>
-                                    <button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Titulo del item" data-content="Texto detalle del item ">
+                                    <button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Nombre del cliente" data-content="Direccion completa del cliente">
                                         <i class="fas fa-info-circle"></i>
                                     </button>
                                 </td>
                                 <td>
-                                    <a href="item-update.html" class="btn btn-success">
+                                    <a href="user-update.html" class="btn btn-success">
                                         <i class="fas fa-sync-alt"></i> 
                                     </a>
                                 </td>
@@ -103,16 +107,18 @@
                             </tr>
                             <tr class="text-center" >
                                 <td>2</td>
-                                <td>012342567</td>
-                                <td>NOMBRE DEL ITEM</td>
-                                <td>57</td>
+                                <td>03045643</td>
+                                <td>NOMBRE DE USUARIO</td>
+                                <td>APELLIDO DE USUARIO</td>
+                                <td>2345456</td>
+                                <td>ADMIN@ADMIN.COM</td>
                                 <td>
-                                    <button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Titulo del item" data-content="Texto detalle del item ">
+                                    <button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Nombre del cliente" data-content="Direccion completa del cliente">
                                         <i class="fas fa-info-circle"></i>
                                     </button>
                                 </td>
                                 <td>
-                                    <a href="item-update.html" class="btn btn-success">
+                                    <a href="user-update.html" class="btn btn-success">
                                         <i class="fas fa-sync-alt"></i> 
                                     </a>
                                 </td>
@@ -126,16 +132,18 @@
                             </tr>
                             <tr class="text-center" >
                                 <td>3</td>
-                                <td>012342567</td>
-                                <td>NOMBRE DEL ITEM</td>
-                                <td>81</td>
+                                <td>03045643</td>
+                                <td>NOMBRE DE USUARIO</td>
+                                <td>APELLIDO DE USUARIO</td>
+                                <td>2345456</td>
+                                <td>ADMIN@ADMIN.COM</td>
                                 <td>
-                                    <button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Titulo del item" data-content="Texto detalle del item ">
+                                    <button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Nombre del cliente" data-content="Direccion completa del cliente">
                                         <i class="fas fa-info-circle"></i>
                                     </button>
                                 </td>
                                 <td>
-                                    <a href="item-update.html" class="btn btn-success">
+                                    <a href="user-update.html" class="btn btn-success">
                                         <i class="fas fa-sync-alt"></i> 
                                     </a>
                                 </td>
@@ -149,16 +157,18 @@
                             </tr>
                             <tr class="text-center" >
                                 <td>4</td>
-                                <td>012342567</td>
-                                <td>NOMBRE DEL ITEM</td>
-                                <td>90</td>
+                                <td>03045643</td>
+                                <td>NOMBRE DE USUARIO</td>
+                                <td>APELLIDO DE USUARIO</td>
+                                <td>2345456</td>
+                                <td>ADMIN@ADMIN.COM</td>
                                 <td>
-                                    <button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Titulo del item" data-content="Texto detalle del item ">
+                                    <button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Nombre del cliente" data-content="Direccion completa del cliente">
                                         <i class="fas fa-info-circle"></i>
                                     </button>
                                 </td>
                                 <td>
-                                    <a href="item-update.html" class="btn btn-success">
+                                    <a href="user-update.html" class="btn btn-success">
                                         <i class="fas fa-sync-alt"></i> 
                                     </a>
                                 </td>

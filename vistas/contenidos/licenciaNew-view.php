@@ -1,23 +1,23 @@
 			<!-- Page header -->
 			<div class="full-box page-header">
 				<h3 class="text-left">
-					<i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR CLIENTE
+					<i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR LICENCIA
 				</h3>
 				<p class="text-justify">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem odit amet asperiores quis minus, dolorem repellendus optio doloremque error a omnis soluta quae magnam dignissimos, ipsam, temporibus sequi, commodi accusantium!
+					Podremso generar las licencias de negocios que previamente se hayan registrado sus representantes.
 				</p>
 			</div>
 
 			<div class="container-fluid">
 				<ul class="full-box list-unstyled page-nav-tabs">
 					<li>
-						<a class="active" href="client-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR CLIENTE</a>
+						<a class="active" href="<?php echo SERVERURL;?>licenciaNew/"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR LICENCIA</a>
 					</li>
 					<li>
-						<a href="client-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE CLIENTES</a>
+						<a href="<?php echo SERVERURL;?>licenciaList/"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE LICENCIAS</a>
 					</li>
 					<li>
-						<a href="client-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR CLIENTE</a>
+						<a href="<?php echo SERVERURL;?>licenciaSearch/"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR LICENCIA</a>
 					</li>
 				</ul>	
 			</div>
@@ -26,7 +26,7 @@
 			<div class="container-fluid">
 				<form action="" class="form-neon" autocomplete="off">
 					<fieldset>
-						<legend><i class="fas fa-user"></i> &nbsp; Información básica</legend>
+						<legend><i class="fas fa-user"></i> &nbsp; Información de licencia</legend>
 						<div class="container-fluid">
 							<div class="row">
 								<div class="col-12 col-md-6">

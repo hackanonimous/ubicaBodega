@@ -26,112 +26,122 @@
             <div class="container-fluid">
             	<div class="table-responsive">
             		<table class="table table-dark table-sm">
-            			<thead>
-            				<tr class="text-center roboto-medium">
-            					<th>#</th>
-            					<th>CÓDIGO</th>
-            					<th>NOMBRE</th>
-            					<th>STOCK</th>
-            					<th>DETALLE</th>
-            					<th>ACTUALIZAR</th>
-            					<th>ELIMINAR</th>
-            				</tr>
-            			</thead>
-            			<tbody>
-            				<tr class="text-center" >
-            					<td>1</td>
-            					<td>012342567</td>
-            					<td>NOMBRE DEL ITEM</td>
-            					<td>20</td>
-            					<td>
-            						<button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Titulo del item" data-content="Texto detalle del item ">
-            							<i class="fas fa-info-circle"></i>
-            						</button>
-            					</td>
-            					<td>
-            						<a href="item-update.html" class="btn btn-success">
-            							<i class="fas fa-sync-alt"></i> 
-            						</a>
-            					</td>
-            					<td>
-            						<form action="">
-            							<button type="button" class="btn btn-warning">
-            								<i class="far fa-trash-alt"></i>
-            							</button>
-            						</form>
-            					</td>
-            				</tr>
-            				<tr class="text-center" >
-            					<td>2</td>
-            					<td>012342567</td>
-            					<td>NOMBRE DEL ITEM</td>
-            					<td>57</td>
-            					<td>
-            						<button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Titulo del item" data-content="Texto detalle del item ">
-            							<i class="fas fa-info-circle"></i>
-            						</button>
-            					</td>
-            					<td>
-            						<a href="item-update.html" class="btn btn-success">
-            							<i class="fas fa-sync-alt"></i> 
-            						</a>
-            					</td>
-            					<td>
-            						<form action="">
-            							<button type="button" class="btn btn-warning">
-            								<i class="far fa-trash-alt"></i>
-            							</button>
-            						</form>
-            					</td>
-            				</tr>
-            				<tr class="text-center" >
-            					<td>3</td>
-            					<td>012342567</td>
-            					<td>NOMBRE DEL ITEM</td>
-            					<td>81</td>
-            					<td>
-            						<button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Titulo del item" data-content="Texto detalle del item ">
-            							<i class="fas fa-info-circle"></i>
-            						</button>
-            					</td>
-            					<td>
-            						<a href="item-update.html" class="btn btn-success">
-            							<i class="fas fa-sync-alt"></i> 
-            						</a>
-            					</td>
-            					<td>
-            						<form action="">
-            							<button type="button" class="btn btn-warning">
-            								<i class="far fa-trash-alt"></i>
-            							</button>
-            						</form>
-            					</td>
-            				</tr>
-            				<tr class="text-center" >
-            					<td>4</td>
-            					<td>012342567</td>
-            					<td>NOMBRE DEL ITEM</td>
-            					<td>90</td>
-            					<td>
-            						<button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Titulo del item" data-content="Texto detalle del item ">
-            							<i class="fas fa-info-circle"></i>
-            						</button>
-            					</td>
-            					<td>
-            						<a href="item-update.html" class="btn btn-success">
-            							<i class="fas fa-sync-alt"></i> 
-            						</a>
-            					</td>
-            					<td>
-            						<form action="">
-            							<button type="button" class="btn btn-warning">
-            								<i class="far fa-trash-alt"></i>
-            							</button>
-            						</form>
-            					</td>
-            				</tr>
-            			</tbody>
-            		</table>
+                        <thead>
+                            <tr class="text-center roboto-medium">
+                                <th>#</th>
+                                <th>DNI</th>
+                                <th>NOMBRE</th>
+                                <th>APELLIDO</th>
+                                <th>TELÉFONO</th>
+                                <th>EMAIL</th>
+                                <th>DIRECCION</th>
+                                <th>ACTUALIZAR</th>
+                                <th>ELIMINAR</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="text-center" >
+                                <td>1</td>
+                                <td>03045643</td>
+                                <td>NOMBRE DE USUARIO</td>
+                                <td>APELLIDO DE USUARIO</td>
+                                <td>2345456</td>
+                                <td>ADMIN@ADMIN.COM</td>
+                                <td>
+                                    <button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Nombre del cliente" data-content="Direccion completa del cliente">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                </td>
+                                <td>
+                                    <a href="user-update.html" class="btn btn-success">
+                                        <i class="fas fa-sync-alt"></i> 
+                                    </a>
+                                </td>
+                                <td>
+                                    <form action="">
+                                        <button type="button" class="btn btn-warning">
+                                            <i class="far fa-trash-alt"></i>
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr class="text-center" >
+                                <td>2</td>
+                                <td>03045643</td>
+                                <td>NOMBRE DE USUARIO</td>
+                                <td>APELLIDO DE USUARIO</td>
+                                <td>2345456</td>
+                                <td>ADMIN@ADMIN.COM</td>
+                                <td>
+                                    <button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Nombre del cliente" data-content="Direccion completa del cliente">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                </td>
+                                <td>
+                                    <a href="user-update.html" class="btn btn-success">
+                                        <i class="fas fa-sync-alt"></i> 
+                                    </a>
+                                </td>
+                                <td>
+                                    <form action="">
+                                        <button type="button" class="btn btn-warning">
+                                            <i class="far fa-trash-alt"></i>
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr class="text-center" >
+                                <td>3</td>
+                                <td>03045643</td>
+                                <td>NOMBRE DE USUARIO</td>
+                                <td>APELLIDO DE USUARIO</td>
+                                <td>2345456</td>
+                                <td>ADMIN@ADMIN.COM</td>
+                                <td>
+                                    <button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Nombre del cliente" data-content="Direccion completa del cliente">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                </td>
+                                <td>
+                                    <a href="user-update.html" class="btn btn-success">
+                                        <i class="fas fa-sync-alt"></i> 
+                                    </a>
+                                </td>
+                                <td>
+                                    <form action="">
+                                        <button type="button" class="btn btn-warning">
+                                            <i class="far fa-trash-alt"></i>
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr class="text-center" >
+                                <td>4</td>
+                                <td>03045643</td>
+                                <td>NOMBRE DE USUARIO</td>
+                                <td>APELLIDO DE USUARIO</td>
+                                <td>2345456</td>
+                                <td>ADMIN@ADMIN.COM</td>
+                                <td>
+                                    <button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" title="Nombre del cliente" data-content="Direccion completa del cliente">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                </td>
+                                <td>
+                                    <a href="user-update.html" class="btn btn-success">
+                                        <i class="fas fa-sync-alt"></i> 
+                                    </a>
+                                </td>
+                                <td>
+                                    <form action="">
+                                        <button type="button" class="btn btn-warning">
+                                            <i class="far fa-trash-alt"></i>
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
             	</div>
             	<nav aria-label="Page navigation example">
             		<ul class="pagination justify-content-center">

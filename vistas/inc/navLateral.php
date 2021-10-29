@@ -20,13 +20,13 @@
 					<a href="#" class="nav-btn-submenu"><i class="fas fa-tags fa-fw"></i> &nbsp; Actividad Economica <i class="fas fa-chevron-down"></i></a>
 					<ul>
 						<li>
-							<a href="<?php echo SERVERURL;?>zonaNew/"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar zona</a>
+							<a href="zonaNew/"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar zona</a>
 						</li>
 						<li>
-							<a href="<?php echo SERVERURL;?>zonaList/"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de zonas</a>
+							<a href="zonaList/"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de zonas</a>
 						</li>
 						<li>
-							<a href="<?php echo SERVERURL;?>zonaSearch/"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar zona</a>
+							<a href="zonaSearch/"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar zona</a>
 						</li>
 					</ul>
 				</li>
