@@ -31,6 +31,26 @@
 							<div class="row">
 								<div class="col-12 col-md-6">
 									<div class="form-group">
+										<label for="item_estado" class="bmd-label-floating">Tipo de Licencia</label>
+										<select class="form-control" name="item_estado_reg" id="item_estado">
+											<option value="" selected="" disabled="">Seleccione una opción</option>
+											<option value="Habilitado">Indeterminada</option>
+											<option value="Deshabilitado">Especial</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-12 col-md-6">
+									<div class="form-group">
+										<label for="cliente_nombre" class="bmd-label-floating">N° Expediente</label>
+										<input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,40}" class="form-control" name="cliente_nombre_reg" id="cliente_nombre" maxlength="40">
+									</div>
+								</div>
+								
+
+
+
+								<div class="col-12 col-md-6">
+									<div class="form-group">
 										<label for="cliente_dni" class="bmd-label-floating">DNI</label>
 										<input type="text" pattern="[0-9-]{1,27}" class="form-control" name="cliente_dni_reg" id="cliente_dni" maxlength="27">
 									</div>
