@@ -1,3 +1,16 @@
+			
+			<script>
+				function mostrar(dato){
+			        if(dato=="1"){
+			            document.getElementById("formIndertinada").style.display = "flex";
+			            document.getElementById("formEspecial").style.display = "none";
+			        }
+			        if(dato=="2"){
+			            document.getElementById("formIndertinada").style.display = "none";
+			            document.getElementById("formEspecial").style.display = "flex";
+			        }
+			    }
+			</script>
 			<!-- Page header -->
 			<div class="full-box page-header">
 				<h3 class="text-left">
@@ -28,7 +41,13 @@
 					<fieldset>
 						<legend><i class="fas fa-user"></i> &nbsp; Información de licencia</legend>
 						<div class="container-fluid">
-							<div class="row">
+
+
+							<input type="radio" name="licencia" id="indeterminada" value="1" onchange="mostrar(this.value);"><label for="">indeterminada</label>
+							<input type="radio" name="licencia" id="especial" value="2" onchange="mostrar(this.value);"><label for="">especial</label>
+
+				
+							<div class="row" id="formIndertinada" style="display:none;">
 								<div class="col-12 col-md-6">
 									<div class="form-group">
 										<label for="item_estado" class="bmd-label-floating">Tipo de Licencia</label>
@@ -45,10 +64,6 @@
 										<input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,40}" class="form-control" name="cliente_nombre_reg" id="cliente_nombre" maxlength="40">
 									</div>
 								</div>
-								
-
-
-
 								<div class="col-12 col-md-6">
 									<div class="form-group">
 										<label for="cliente_dni" class="bmd-label-floating">DNI</label>
@@ -80,6 +95,26 @@
 									</div>
 								</div>
 							</div>
+							<div class="row" id="formEspecial" style="display:none;">
+								<div class="col-12 col-md-6">
+									<div class="form-group">
+										<label for="item_estado" class="bmd-label-floating">Tipo de Licencia</label>
+										<select class="form-control" name="item_estado_reg" id="item_estado">
+											<option value="" selected="" disabled="">Seleccione una opción</option>
+											<option value="Habilitado">Indeterminada</option>
+											<option value="Deshabilitado">Especial</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-12 col-md-4">
+									<div class="form-group">
+										<label for="cliente_direccion" class="bmd-label-floating">Dirección</label>
+										<input type="text" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,#\- ]{1,150}" class="form-control" name="cliente_direccion_reg" id="cliente_direccion" maxlength="150">
+									</div>
+								</div>
+							</div>
+
+
 						</div>
 					</fieldset>
 					<br><br><br>
