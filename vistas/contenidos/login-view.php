@@ -1,21 +1,47 @@
-<div class="login-container">
-	<div class="login-content">
-		<p class="text-center">
-			<i class="fas fa-user-circle fa-5x"></i>
-		</p>
-		<p class="text-center">
-			Inicia sesión con tu cuenta
-		</p>
-		<form action="" method="POST" autocomplete="off" >
-			<div class="form-group">
-				<label for="UserName" class="bmd-label-floating"><i class="fas fa-user-secret"></i> &nbsp; Usuario</label>
-				<input type="text" class="form-control" id="UserName" name="usuario" pattern="[a-zA-Z0-9]{1,35}" maxlength="35" required="" >
-			</div>
-			<div class="form-group">
-				<label for="UserPassword" class="bmd-label-floating"><i class="fas fa-key"></i> &nbsp; Contraseña</label>
-				<input type="password" class="form-control" id="UserPassword" name="clave" pattern="[a-zA-Z0-9$@.-]{7,100}" maxlength="100" required="" >
-			</div>
-			<button type="submit" class="btn-login text-center">LOG IN</button>
-		</form>
-	</div>
+<div class="hold-transition login-page">
+	<div class="login-box">
+  <div class="login-logo">
+    <p><b>Sistema</b>LICENCIAS</p>
+  </div>
+  <!-- /.login-logo -->
+  <div class="card">
+    <div class="card-body login-card-body">
+      <p class="login-box-msg">Inicie sesion para comensar</p>
+      <form action="../../index3.html" method="post">
+        <div class="input-group mb-3">
+          <input type="number" class="form-control" placeholder="Usuario(DNI)">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" placeholder="Contraseña">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8">
+            <div class="icheck-primary">
+              <input type="checkbox" id="remember">
+              <label for="remember">
+                Recordar
+              </label>
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="col-4">
+            <button type="submit" class="btn btn-success btn-block">Ingresar</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+    </div>
+    <!-- /.login-card-body -->
+  </div>
+</div>
 </div>

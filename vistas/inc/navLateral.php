@@ -1,106 +1,131 @@
-<section class="full-box nav-lateral">
-	<div class="full-box nav-lateral-bg show-nav-lateral"></div>
-	<div class="full-box nav-lateral-content">
-		<figure class="full-box nav-lateral-avatar">
-			<i class="far fa-times-circle show-nav-lateral"></i>
-			<img src="<?php echo SERVERURL;?>vistas/assets/avatar/Avatar.png" class="img-fluid" alt="Avatar">
-			<figcaption class="roboto-medium text-center">
-				Jose Alvarez <br><small class="roboto-condensed-light">Web Developer</small>
-			</figcaption>
-		</figure>
-		<div class="full-box nav-lateral-bar"></div>
-		<nav class="full-box nav-lateral-menu">
-			<ul>
-				<li>
-					<a href="<?php echo SERVERURL;?>home/"><i class="fas fa-tachometer-alt fa-fw"></i> &nbsp; Dashboard</a>
-				</li>
+<!-- Menu de Barra lateral -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Nombre de sistema y logo -->
+    <a href="./index.html" class="brand-link">
+      <img src="<?php echo SERVERURL;?>vistas/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Sis Licencias</span>
+    </a>
 
-				<!--
-				<li>
-					<a href="#" class="nav-btn-submenu"><i class="fas fa-tags fa-fw"></i> &nbsp; Actividad Economica <i class="fas fa-chevron-down"></i></a>
-					<ul>
-						<li>
-							<a href="zonaNew/"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar zona</a>
-						</li>
-						<li>
-							<a href="zonaList/"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de zonas</a>
-						</li>
-						<li>
-							<a href="zonaSearch/"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar zona</a>
-						</li>
-					</ul>
-				</li>
-				-->
-				<li>
-					<a href="#" class="nav-btn-submenu"><i class="fas fa-users fa-fw"></i> &nbsp; Representantes <i class="fas fa-chevron-down"></i></a>
-					<ul>
-						<li>
-							<a href="<?php echo SERVERURL;?>representanteNew/"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar representante</a>
-						</li>
-						<li>
-							<a href="<?php echo SERVERURL;?>representanteList/"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de representantes</a>
-						</li>
-						<li>
-							<a href="<?php echo SERVERURL;?>representanteSearch/"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar representante</a>
-						</li>
-					</ul>
-				</li>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Panel de Usuario (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="<?php echo SERVERURL;?>vistas/dist/img/avatar1.png" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Jose Alvarez</a>
+        </div>
+      </div>
 
-				<li>
-					<a href="#" class="nav-btn-submenu"><i class="fas fa-store fa-fw"></i> &nbsp; Registro Licencia <i class="fas fa-chevron-down"></i></a>
-					<ul>
-						<li>
-							<a href="<?php echo SERVERURL;?>licenciaNew/"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar Licencias</a>
-						</li>
-						<li>
-							<a href="<?php echo SERVERURL;?>licenciaList/"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de Licencias</a>
-						</li>
-						<li>
-							<a href="<?php echo SERVERURL;?>licenciaSearch/"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar Licencia</a>
-						</li>
-					</ul>
-				</li>
-
-				<li>
-					<a href="#" class="nav-btn-submenu"><i class="fas  fa-user-secret fa-fw"></i> &nbsp; Usuarios del Sistema<i class="fas fa-chevron-down"></i></a>
-					<ul>
-						<li>
-							<a href="<?php echo SERVERURL;?>usuarioNew/"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo usuario</a>
-						</li>
-						<li>
-							<a href="<?php echo SERVERURL;?>usuarioList/"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de usuarios</a>
-						</li>
-						<li>
-							<a href="<?php echo SERVERURL;?>usuarioSearch/"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar usuario</a>
-						</li>
-					</ul>
-				</li>
-
-				<!--<li>
-					<a href="#" class="nav-btn-submenu"><i class="fas fa-file-alt fa-fw"></i> &nbsp; Préstamos <i class="fas fa-chevron-down"></i></a>
-					<ul>
-						<li>
-							<a href="reservation-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo préstamo</a>
-						</li>
-						<li>
-							<a href="reservation-reservation.html"><i class="far fa-calendar-alt fa-fw"></i> &nbsp; Reservaciones</a>
-						</li>
-						<li>
-							<a href="reservation-pending.html"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; Préstamos</a>
-						</li>
-						<li>
-							<a href="reservation-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Finalizados</a>
-						</li>
-						<li>
-							<a href="reservation-search.html"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; Buscar por fecha</a>
-						</li>
-					</ul>
-				</li>-->
-
-				<li>
-					<a href="company.html"><i class="fas fa-cogs fa-fw"></i> &nbsp; Empresa</a>
-				</li>
-			</ul>
-		</nav>
-	</div>
-</section>
+      <!-- Menus del Sidebar -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-header">GENERAL</li>
+          <li class="nav-item menu-open">
+            <a href="./index.html" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Personas
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/layout/top-nav.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Registrar persona</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Lista de Personas</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/layout/boxed.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Buscar persona</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-header">GDEL</li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Licencias de funcionamiento
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/forms/general.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Registrar licencia</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/advanced.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Lista de licencias</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/editors.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Buscar licencia</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-header">TRANSPORTES</li>
+          <li class="nav-header">ADMINISTRADOR</li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-users-cog"></i>
+              <p>
+                Usuarios de sistema
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/tables/simple.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Usuario nuevo</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/tables/data.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Lista de ususarios</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Buscar usuario</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.Menus del Sidebar -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+  <!-- /.Menu de Barra lateral -->
