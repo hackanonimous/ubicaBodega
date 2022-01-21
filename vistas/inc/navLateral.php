@@ -25,7 +25,7 @@
                with font-awesome or any other icon font library -->
           <li class="nav-header">GENERAL</li>
           <li class="nav-item menu-open">
-            <a href="./index.html" class="nav-link active">
+            <a href="<?php echo SERVERURL;?>home/" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -42,26 +42,43 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
+                <a href="<?php echo SERVERURL;?>personaNew/" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Registrar persona</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                <a href="<?php echo SERVERURL;?>personaList/" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Lista de Personas</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/boxed.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Buscar persona</p>
                 </a>
               </li>
             </ul>
           </li>
           <li class="nav-header">GDEL</li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-store"></i>
+              <p>
+                Empresa
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo SERVERURL;?>empresaNew/" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Registrar empresa</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?php echo SERVERURL;?>empresaList/" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Lista de empresa</p>
+                </a>
+              </li>
+            </ul>
+          </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
