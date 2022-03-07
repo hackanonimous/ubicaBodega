@@ -45,13 +45,23 @@
 <script src="<?php echo SERVERURL;?>vistas/dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo SERVERURL;?>vistas/dist/js/demo.js"></script>
-<!-- Page specific script -->
+<!-- Select2 -->
+<script src="<?php echo SERVERURL;?>vistas/plugins/select2/js/select2.full.min.js"></script>
 <script>
   $(function () {
     bsCustomFileInput.init();
   });
 </script>
 <script>
+  $(function () {
+    //Initialize Select2 Elements
+    $('.select2').select2()
+
+    //Initialize Select2 Elements
+    $('.select2bs4').select2({
+      theme: 'bootstrap4'
+    })
+  });
   $(function () {
     $("#example1").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,

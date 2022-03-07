@@ -16,8 +16,8 @@
 </div>
 <!-- /.Cabezera de contenido central -->
 <section class="content">
-	<div class="container-fluid">
-		<!-- Formularios -->
+  <div class="container-fluid">
+    <!-- Formularios -->
         <div class="row">
           <!-- left column -->
           <div class="col-md-12">
@@ -71,6 +71,5 @@
           <!--/.col (left) -->
         </div>
         <!-- /.Formularios -->
-	</div>
+  </div>
 </section>  
- 

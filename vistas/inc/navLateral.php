@@ -89,21 +89,15 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/forms/general.html" class="nav-link">
+                <a href="<?php echo SERVERURL;?>licenciaNew/" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Registrar licencia</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/forms/advanced.html" class="nav-link">
+                <a href="<?php echo SERVERURL;?>licenciaList/" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Lista de licencias</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/editors.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Buscar licencia</p>
                 </a>
               </li>
             </ul>
