@@ -1,3 +1,7 @@
+<script type="text/javascript">
+  let navLateEmp = document.querySelector('#nav-empresa');
+  navLateEmp.classList.add('menu-open');
+</script>
 <!-- CCabezera (Pagina cabezera) -->
 <div class="content-header">
   <div class="container-fluid">
@@ -28,7 +32,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+              <form class="FormularioAjax" action="" method="POST" data-form="save">
                 <div class="card-body row">
                   <div class="form-group col-md-6">
                     <label>N° RUC</label>

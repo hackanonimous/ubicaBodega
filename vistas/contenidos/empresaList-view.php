@@ -1,3 +1,7 @@
+<script type="text/javascript">
+  let navLateEmp = document.querySelector('#nav-empresa');
+  navLateEmp.classList.add('menu-open');
+</script>
 <!-- Cabezera (Pagina cabezera) -->
 <div class="content-header">
   <div class="container-fluid">
@@ -44,7 +48,7 @@
                   <button type="button" class="btn btn-primary"><i class="fas fa-upload">Actualizar</i></button>
                 </td>
               </tr>
-               <tr>
+              <tr>
                 <td>70133573</td>
                 <td>jose luis alvarez escobar
                 </td>

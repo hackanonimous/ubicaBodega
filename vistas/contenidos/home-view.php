@@ -1,3 +1,7 @@
+<script type="text/javascript">
+  let navLateDash = document.querySelector('#nav-dashboard');
+  navLateDash.classList.add('menu-open');
+</script>
 <!-- Cabezera (Pagina cabezera) -->
     <div class="content-header">
       <div class="container-fluid">

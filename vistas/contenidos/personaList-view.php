@@ -1,3 +1,7 @@
+<script type="text/javascript">
+  let navLatePers = document.querySelector('#nav-personas');
+  navLatePers.classList.add('menu-open');
+</script>
 <!-- Cabezera (Pagina cabezera) -->
 <div class="content-header">
   <div class="container-fluid">

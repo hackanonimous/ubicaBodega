@@ -1,3 +1,7 @@
+<script type="text/javascript">
+  let navLateLic = document.querySelector('#nav-licfun');
+  navLateLic.classList.add('menu-open');
+</script>
 <!-- CCabezera (Pagina cabezera) -->
 <div class="content-header">
   <div class="container-fluid">
@@ -42,7 +46,7 @@
 		              <div class="card-body">
 		                <div class="tab-content" id="custom-tabs-four-tabContent">
 		                  <div class="tab-pane fade show active" id="licencia-indeterminada" role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
-			                	<form>
+						  			<form class="FormularioAjax" action="" method="POST" data-form="save">
 					                <div class="card-body row">
 					                  <div class="form-group col-md-6">
 					                    <label>Numero de Expediente</label>
@@ -76,7 +80,7 @@
 					            	</form>
 		                  </div>
 		                  <div class="tab-pane fade" id="licencia-especial" role="tabpanel" aria-labelledby="custom-tabs-four-profile-tab">
-		                     <form>
+						  		<form class="FormularioAjax" action="" method="POST" data-form="save">
 					                <div class="card-body row">
 					                  <div class="form-group col-md-6">
 					                    <label>Numero de Expediente</label>

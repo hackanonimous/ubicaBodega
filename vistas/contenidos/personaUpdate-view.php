@@ -28,7 +28,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+              <form class="FormularioAjax" action="" method="POST" data-form="update">
                 <div class="card-body row">
                   <div class="form-group col-md-6">
                     <label>N° DNI</label>

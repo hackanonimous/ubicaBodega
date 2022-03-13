@@ -24,7 +24,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-header">GENERAL</li>
-          <li class="nav-item menu-open">
+          <li id="nav-dashboard" class="nav-item">
             <a href="<?php echo SERVERURL;?>home/" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
@@ -32,7 +32,7 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
+          <li id="nav-personas" class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
@@ -56,7 +56,7 @@
             </ul>
           </li>
           <li class="nav-header">GDEL</li>
-          <li class="nav-item">
+          <li id="nav-empresa" class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-store"></i>
               <p>
@@ -79,7 +79,7 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item">
+          <li id="nav-licfun" class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
@@ -104,7 +104,7 @@
           </li>
           <li class="nav-header">TRANSPORTES</li>
           <li class="nav-header">ADMINISTRADOR</li>
-          <li class="nav-item">
+          <li id="nav-usuario" class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-users-cog"></i>
               <p>
@@ -114,21 +114,15 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/tables/simple.html" class="nav-link">
+                <a href="<?php echo SERVERURL;?>usuarioNew/" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Usuario nuevo</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/tables/data.html" class="nav-link">
+                <a href="<?php echo SERVERURL;?>usuarioList/" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Lista de ususarios</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/tables/jsgrid.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Buscar usuario</p>
                 </a>
               </li>
             </ul>

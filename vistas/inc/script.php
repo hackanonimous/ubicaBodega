@@ -45,6 +45,8 @@
 <script src="<?php echo SERVERURL;?>vistas/dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo SERVERURL;?>vistas/dist/js/demo.js"></script>
+<!-- alertas persoonalizadas -->
+<script src="<?php echo SERVERURL;?>vistas/dist/js/alertas.js"></script>
 <!-- Select2 -->
 <script src="<?php echo SERVERURL;?>vistas/plugins/select2/js/select2.full.min.js"></script>
 <script>

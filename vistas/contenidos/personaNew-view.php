@@ -1,3 +1,7 @@
+<script type="text/javascript">
+  let navLatePers = document.querySelector('#nav-personas');
+  navLatePers.classList.add('menu-open');
+</script>
 <!-- CCabezera (Pagina cabezera) -->
 <div class="content-header">
   <div class="container-fluid">
@@ -28,41 +32,42 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+              <form class="FormularioAjax" action="<?php echo SERVERURL;?>ajax/personaAjax.php" method="POST" data-form="save">
                 <div class="card-body row">
                   <div class="form-group col-md-6">
-                    <label>N° DNI</label>
-                    <input type="number" class="form-control" placeholder="Ingrese su numero de DNI">
+                    <label for="persona_dni">N° DNI</label>
+                    <input type="number" class="form-control" placeholder="Ingrese su numero de DNI" pattern="[0-9]{1,9}" id="persona_dni" name="persona_dni_reg" maxlength="9" >
                   </div>
                   <div class="form-group col-md-6">
-                    <label>Nombres</label>
-                    <input type="text" class="form-control" placeholder="Ingrese sus Nombres">
+                    <label for="persona_nombre">Nombres</label>
+                    <input type="text" class="form-control" placeholder="Ingrese sus Nombres" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ]{1,45}" id="persona_nombre" name="persona_nombre_reg" maxlength="45" >
                   </div>
                   <div class="form-group col-md-6">
-                    <label>Apellido Paterno</label>
-                    <input type="text" class="form-control" placeholder="Ingrese su Apellido Paterno">
+                    <label for="persona_apaterno">Apellido Paterno</label>
+                    <input type="text" class="form-control" placeholder="Ingrese su Apellido Paterno" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ]{1,45}" id="persona_apaterno" name="persona_apaterno_reg" maxlength="45" >
                   </div>
                   <div class="form-group col-md-6">
-                    <label>Apellido Materno</label>
-                    <input type="text" class="form-control" placeholder="Ingrese su Apellido Materno">
+                    <label for="persona_amaterno">Apellido Materno</label>
+                    <input type="text" class="form-control" placeholder="Ingrese su Apellido Materno" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ]{1,45}" id="persona_amaterno" name="persona_amaterno_reg" maxlength="45" >
                   </div>
                   <div class="form-group col-md-6">
-                    <label>Fecha de Nacimiento</label>
-                    <input type="date" class="form-control" placeholder="Ingrese su Apellido Materno">
+                    <label for="persona_nacimiento">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" placeholder="Ingrese su Apellido Materno" id="persona_nacimiento" name="persona_nacimiento_reg" maxlength="45" >
                   </div>
                   <div class="form-group col-md-6">
-                    <label>N° de Celular</label>
-                    <input type="number" class="form-control" placeholder="Ingrese su numero de celular">
+                    <label for="persona_celular">N° de Celular</label>
+                    <input type="tel" class="form-control" placeholder="Ingrese su numero de celular" pattern="[1-9]{1,10}" id="persona_celular" name="persona_celular_reg" maxlength="10" >
                   </div>
                   <div class="form-group col-md-6">
-                    <label>Email</label>
-                    <input type="email" class="form-control" placeholder="Ingrese su email">
+                    <label for="persona_email">Email</label>
+                    <input type="email" class="form-control" placeholder="Ingrese su email" id="persona_email" name="persona_email_reg">
                   </div>
                 </div>
                 <!-- /.card-body -->
-
+                
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Registrar</button>
+                  <button type="submit" class="btn btn-danger">Cancelar</button>
                 </div>
               </form>
             </div>
