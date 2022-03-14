@@ -32,18 +32,15 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form class="FormularioAjax" action="" method="POST" data-form="save">
+              <form class="FormularioAjax" action="<?php echo SERVERURL;?>ajax/usuarioAjax.php" method="POST" data-form="save">
                 <div class="card-body row">
                   <div class="form-group col-md-6">
                     <label>Seleccione una Persona</label>
-                    <select class="select2" multiple="multiple" data-placeholder="Seleccione Representante" style="width: 100%;">
-                      <option>70133573-Alabama</option>
-                      <option>Alaska</option>
-                      <option>California</option>
-                      <option>Delaware</option>
-                      <option>Tennessee</option>
-                      <option>Texas</option>
-                      <option>Washington</option>
+                    <select class="select2" multiple="multiple" data-placeholder="Seleccione Persona" style="width: 100%;" id="usuario_dni" name="usuario_dni_reg" required>
+                      <option value="70133573">70133573-Alabama</option>
+                      <option value="1">Control total</option>
+                      <option value="2">Edición</option>
+                      <option value="3">Registrar</option>
                     </select>
                   </div>
                   <div class="form-group col-md-6">
@@ -52,13 +49,24 @@
                   </div>
                   <div class="form-group col-md-6">
                     <label>Clave</label>
-                    <input type="password" class="form-control" placeholder="Ingrese una contraseña">
+                    <input type="password" class="form-control" placeholder="Ingrese una contraseña" id="usuario_clave1" name="usuario_clave_1_reg">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label>Repita su Clave</label>
+                    <input type="password" class="form-control" placeholder="Repita su contraseña" id="usuario_clave2" name="usuario_clave_2_reg">
                   </div>
                   <div class="form-group col-md-6">
                     <label>Estado del Usuario</label>
-                    <select class="select2" multiple="multiple" data-placeholder="Seleccione Representante" style="width: 100%;">
+                    <select class="select2" multiple="multiple" data-placeholder="Seleccione Representante" style="width: 100%;" name="usuario_estado_reg" required>
                       <option>Activo</option>
                       <option>Inactivo</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label>Privilegio de Usuario</label>
+                    <select class="select2" multiple="multiple" data-placeholder="Seleccione Representante" style="width: 100%;" name="usuario_privilegio_reg" required>
+                      <option>Administrador</option>
+                      <option>Usuario</option>
                     </select>
                   </div>
                 </div>
@@ -66,6 +74,7 @@
 
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Registrar</button>
+                  <button type="submit" class="btn btn-danger">Cancelar</button>
                 </div>
               </form>
             </div>

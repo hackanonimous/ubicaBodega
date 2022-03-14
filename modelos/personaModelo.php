@@ -3,7 +3,7 @@
     class personaModelo extends mainModel{
         /*modelo agregar persona*/
         protected static function agregar_persona_modelo($datos){
-            $sql=mainModel::conectar()->prepare("INSER INTO tpersona(persona_dni,persona_nombres,persona_apaterno,persona_amaterno,persona_nacimiento,persona_telefono,persona_mail) VALUES(:DNI,:Nombre,:APaterno,:AMaterno,:Nacimiento,:Telefono,:Mail)");
+            $sql=mainModel::conectar()->prepare("INSERT INTO tpersona(persona_dni,persona_nombres,persona_apaterno,persona_amaterno,persona_nacimiento,persona_telefono,persona_mail) VALUES(:DNI,:Nombre,:APaterno,:AMaterno,:Nacimiento,:Telefono,:Mail)");
 
             $sql->bindParam(":DNI",$datos['DNI']);
             $sql->bindParam(":Nombre",$datos['Nombre']);

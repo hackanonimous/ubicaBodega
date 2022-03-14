@@ -36,27 +36,27 @@
                 <div class="card-body row">
                   <div class="form-group col-md-6">
                     <label for="persona_dni">N° DNI</label>
-                    <input type="number" class="form-control" placeholder="Ingrese su numero de DNI" pattern="[0-9]{1,9}" id="persona_dni" name="persona_dni_reg" maxlength="9" >
+                    <input type="number" class="form-control" placeholder="Ingrese su numero de DNI" pattern="[0-8]{1,20}" id="persona_dni" name="persona_dni_reg" maxlength="8" required>
                   </div>
                   <div class="form-group col-md-6">
                     <label for="persona_nombre">Nombres</label>
-                    <input type="text" class="form-control" placeholder="Ingrese sus Nombres" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ]{1,45}" id="persona_nombre" name="persona_nombre_reg" maxlength="45" >
+                    <input type="text" class="form-control" placeholder="Ingrese sus Nombres" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{1,45}" id="persona_nombre" name="persona_nombre_reg" maxlength="45" required>
                   </div>
                   <div class="form-group col-md-6">
                     <label for="persona_apaterno">Apellido Paterno</label>
-                    <input type="text" class="form-control" placeholder="Ingrese su Apellido Paterno" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ]{1,45}" id="persona_apaterno" name="persona_apaterno_reg" maxlength="45" >
+                    <input type="text" class="form-control" placeholder="Ingrese su Apellido Paterno" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ]{1,45}" id="persona_apaterno" name="persona_apaterno_reg" maxlength="45" required>
                   </div>
                   <div class="form-group col-md-6">
                     <label for="persona_amaterno">Apellido Materno</label>
-                    <input type="text" class="form-control" placeholder="Ingrese su Apellido Materno" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ]{1,45}" id="persona_amaterno" name="persona_amaterno_reg" maxlength="45" >
+                    <input type="text" class="form-control" placeholder="Ingrese su Apellido Materno" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ]{1,45}" id="persona_amaterno" name="persona_amaterno_reg" maxlength="45" required>
                   </div>
                   <div class="form-group col-md-6">
                     <label for="persona_nacimiento">Fecha de Nacimiento</label>
-                    <input type="date" class="form-control" placeholder="Ingrese su Apellido Materno" id="persona_nacimiento" name="persona_nacimiento_reg" maxlength="45" >
+                    <input type="date" class="form-control" placeholder="Ingrese su Apellido Materno" id="persona_nacimiento" name="persona_nacimiento_reg" maxlength="45" required>
                   </div>
                   <div class="form-group col-md-6">
                     <label for="persona_celular">N° de Celular</label>
-                    <input type="tel" class="form-control" placeholder="Ingrese su numero de celular" pattern="[1-9]{1,10}" id="persona_celular" name="persona_celular_reg" maxlength="10" >
+                    <input type="tel" class="form-control" placeholder="Ingrese su numero de celular" pattern="[0-9]{1,20}" id="persona_celular" name="persona_celular_reg" maxlength="9" required>
                   </div>
                   <div class="form-group col-md-6">
                     <label for="persona_email">Email</label>
