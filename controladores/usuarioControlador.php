@@ -108,11 +108,10 @@
                         <td>'.$rows['persona_telefono'].'</td>
                         <td>'.$rows['persona_mail'].'</td>
                         <td>
-                            <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt">Eliminar</i></button>
-
-                            <a href="'.SERVERURL.'usuarioUpdate/'.mainModel::encryption().'/" class="btn btn-primary">
+                            <a href="'.SERVERURL.'usuarioUpdate/'.mainModel::encryption($rows['usuario_dni']).'/" class="btn btn-primary">
                                 <i class="fas           fa-upload">Actualizar</i>
                             </a>
+                            <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt">Eliminar</i></button>
                         </td>
                     </tr>
                     ';
