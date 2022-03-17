@@ -1,9 +1,9 @@
 <!-- Menu de Barra lateral -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Nombre de sistema y logo -->
-    <a href="./index.html" class="brand-link">
+    <a href="<?php echo SERVERURL;?>" class="brand-link">
       <img src="<?php echo SERVERURL;?>vistas/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Sis Licencias</span>
+      <span class="brand-text font-weight-light"><?php echo COMPANY;?></span>
     </a>
 
     <!-- Sidebar -->
@@ -14,7 +14,7 @@
           <img src="<?php echo SERVERURL;?>vistas/dist/img/avatar1.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Jose Alvarez</a>
+          <a href="#" class="d-block"><?php echo $_SESSION['nombre_sel']." ".$_SESSION['apaterno_sel'];?></a>
         </div>
       </div>
 
@@ -102,6 +102,7 @@
               </li>
             </ul>
           </li>
+          <?php if($_SESSION['privilegio_sel']=='Administrador'){?>
           <li class="nav-header">TRANSPORTES</li>
           <li class="nav-header">ADMINISTRADOR</li>
           <li id="nav-usuario" class="nav-item">
@@ -127,6 +128,7 @@
               </li>
             </ul>
           </li>
+          <?php }?>
         </ul>
       </nav>
       <!-- /.Menus del Sidebar -->

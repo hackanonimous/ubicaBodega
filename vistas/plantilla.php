@@ -16,6 +16,17 @@
 		if ($vistas=="login" || $vistas=="404") {
 			require_once "./vistas/contenidos/".$vistas."-view.php";
 		} else {
+      session_start(['name'=>'SEL']);
+      
+
+      require_once "./controladores/loginControlador.php";
+      $lc=new loginControlador();
+
+      if(!isset($_SESSION['token_spm']) || !isset($_SESSION['id_sel']) || !isset($_SESSION['nombre_sel']) || !isset($_SESSION['privilegio_sel']) || !isset($_SESSION['apaterno_sel'])){
+        echo $lc->forzar_cierre_sesion_controlador();
+        exit;
+      }
+      
 	 ?>
 <div class="wrapper">
 
@@ -45,6 +56,7 @@
 
 <!--scripts-->
 <?php 
+    include "./vistas/inc/LogOut.php";
 		}
 		include "./vistas/inc/script.php";
 	?>

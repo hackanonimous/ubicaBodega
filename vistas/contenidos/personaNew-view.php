@@ -67,7 +67,7 @@
                 
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Registrar</button>
-                  <button type="submit" class="btn btn-danger">Cancelar</button>
+                  <button type="reset" class="btn btn-danger">Cancelar</button>
                 </div>
               </form>
             </div>

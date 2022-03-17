@@ -25,10 +25,10 @@
               <img src="<?php echo SERVERURL;?>vistas/dist/img/avatar1.png" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
-                  Jose Alvarez
+                  <?php echo $_SESSION['nombre_sel']." ". $_SESSION['apaterno_sel']?>
                   <span class="float-right text-sm text-info"><i class="fas fa-star"></i></span>
                 </h3>
-                <p class="text-sm">Administrador de Pagina</p>
+                <p class="text-sm"><?php echo $_SESSION['privilegio_sel'];?> de Pagina</p>
                 <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 horas activo</p>
               </div>
             </div>
@@ -45,7 +45,7 @@
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="#" class="btn-exit-system dropdown-item">
             <i class="fas fa-door-open mr-2"></i> Cerrar Sesion
           </a>
         </div>

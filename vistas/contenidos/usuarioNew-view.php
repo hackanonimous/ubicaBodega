@@ -1,7 +1,13 @@
+<?php
+  if($_SESSION['privilegio_sel']!='Administrador'){
+    echo $lc->forzar_cierre_sesion_controlador();
+    exit();
+  }
+?>
 <script type="text/javascript">
   let navLateUsu = document.querySelector('#nav-usuario');
   navLateUsu.classList.add('menu-open');
-</script> 
+</script>
 <!-- CCabezera (Pagina cabezera) -->
 <div class="content-header">
   <div class="container-fluid">
@@ -36,11 +42,8 @@
                 <div class="card-body row">
                   <div class="form-group col-md-6">
                     <label>Seleccione una Persona</label>
-                    <select class="select2" multiple="multiple" data-placeholder="Seleccione Persona" style="width: 100%;" id="usuario_dni" name="usuario_dni_reg" required>
-                      <option value="70133573">70133573-Alabama</option>
-                      <option value="1">Control total</option>
-                      <option value="2">Edición</option>
-                      <option value="3">Registrar</option>
+                    <select class="select2" multiple="multiple" data-placeholder="Seleccione Persona" style="width: 100%;" id="select_persona" name="usuario_dni_reg" required>
+                      
                     </select>
                   </div>
                   <div class="form-group col-md-6">
@@ -58,23 +61,24 @@
                   <div class="form-group col-md-6">
                     <label>Estado del Usuario</label>
                     <select class="select2" multiple="multiple" data-placeholder="Seleccione Representante" style="width: 100%;" name="usuario_estado_reg" required>
-                      <option>Activo</option>
-                      <option>Inactivo</option>
+                      <option  value="1">Activo</option>
+                      <option  value="0">Inactivo</option>
                     </select>
                   </div>
                   <div class="form-group col-md-6">
                     <label>Privilegio de Usuario</label>
                     <select class="select2" multiple="multiple" data-placeholder="Seleccione Representante" style="width: 100%;" name="usuario_privilegio_reg" required>
                       <option>Administrador</option>
-                      <option>Usuario</option>
+                      <option>Editor</option>
+                      <option>Registrador</option>
                     </select>
                   </div>
                 </div>
                 <!-- /.card-body -->
-
+                
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Registrar</button>
-                  <button type="submit" class="btn btn-danger">Cancelar</button>
+                  <button type="reset" class="btn btn-danger">Cancelar</button>
                 </div>
               </form>
             </div>
@@ -84,4 +88,23 @@
         </div>
         <!-- /.Formularios -->
 	</div>
-</section>  
+</section> 
+<script type="text/javascript">
+  window.onload=select_personas();
+  function select_personas(){
+    const url = 'http://localhost/ubicaBodega/ajax/listarSelectAjax.php';
+    let html=''
+    let selectPersona=document.querySelector('#select_persona')
+    fetch(url)
+    .then(result=>result.json())
+    .then(result => {
+      result.forEach(result=>{
+        let plantilla = `
+          <option value="${result['persona_dni']}">${result['persona_dni']}-${result['persona_nombres']} ${result['persona_apaterno']} ${result['persona_amaterno']}</option>
+        `
+        html += plantilla;
+      })
+      selectPersona.innerHTML = html
+    })
+  }
+</script>

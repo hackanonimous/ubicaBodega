@@ -8,4 +8,4 @@
 
 	const METHOD="AES-256-CBC";
 	const SECRET_KEY='$UBMPLP@2021';
-	const SECRTE_IV='28092021';
+	const SECRET_IV='28092021';

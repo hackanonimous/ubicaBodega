@@ -17,7 +17,7 @@
             $email=mainModel::limpiar_cadena($_POST['persona_email_reg']);
 
             /*verificamos que no tengamos ningun dato requerido como vacio*/
-            if($dni=="" || $nombre=="" || $apaterno=="" || $amaterno=""){
+            if($dni=="" || $nombre=="" || $apaterno=="" || $amaterno==""){
                 $alerta=[
                     "Alerta"=>"simple",
                     "Titulo"=>"Ocurrio un error inesperado",

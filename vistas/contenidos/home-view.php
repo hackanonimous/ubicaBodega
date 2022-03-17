@@ -24,6 +24,7 @@
       <div class="container-fluid">
         <!-- Cajas (Stat box) -->
         <div class="row">
+        <?php if($_SESSION['privilegio_sel']=='Administrador'){?>
           <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
@@ -38,6 +39,7 @@
               <a href="#" class="small-box-footer">Mas sobre Usuarios <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
+        <?php }?>
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
@@ -61,7 +63,7 @@
                 <h3>100
                 </h3>
 
-                <p>Personas</p>
+                <p>Personas Agregadas</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
@@ -76,12 +78,12 @@
               <div class="inner">
                 <h3>100</h3>
 
-                <p>Horas trabajadas</p>
+                <p>Empresa Registradas</p>
               </div>
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>
               </div>
-              <a href="#" class="small-box-footer">Sobre horas trabajadas <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="#" class="small-box-footer">Mas Sobre Empresas Registradas<i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->

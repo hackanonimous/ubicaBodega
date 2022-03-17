@@ -1,3 +1,9 @@
+<?php
+  if($_SESSION['privilegio_sel']!='Administrador'){
+    echo $lc->forzar_cierre_sesion_controlador();
+    exit();
+  }
+?>
 <script type="text/javascript">
   let navLateUsu = document.querySelector('#nav-usuario');
   navLateUsu.classList.add('menu-open');
@@ -22,7 +28,7 @@
             <!-- Tablas -->
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Tabla de las usuarios registradas en el sistema</h3>
+            <h3 class="card-title">Tabla de las usuarios registrados en el sistema</h3>
           </div>
           <!-- /.card-header -->
           <div class="card-body">
@@ -31,40 +37,34 @@
               <tr>
                 <th>DNI</th>
                 <th>Nombres y Apellidos</th>
+                <th>Privilegio</th>
                 <th>Telefono</th>
+                <th>Mail</th>
                 <th>Acciones</th>
               </tr>
               </thead>
+
               <tbody>
-              <tr>
-                <td>70133573</td>
-                <td>jose luis alvarez escobar
-                </td>
-                <td>917452076</td>
-                <td>
-                  <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt">Eliminar</i></button>
-                  <button type="button" class="btn btn-primary"><i class="fas fa-upload">Actualizar</i></button>
-                </td>
-              </tr>
-               <tr>
-                <td>70133573</td>
-                <td>jose luis alvarez escobar
-                </td>
-                <td>917452076</td>
-                <td>
-                  <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt">Eliminar</i></button>
-                  <button type="button" class="btn btn-primary"><i class="fas fa-upload">Actualizar</i></button>
-                </td>
-              </tr>
+              
+                <?php
+                  require_once "./controladores/usuarioControlador.php";
+                  $ins_listaUsuario=new usuarioControlador();
+                  echo $ins_listaUsuario->listar_usuario_controlador($_SESSION['privilegio_sel'],$_SESSION['id_sel']);
+                ?>
+
               </tbody>
+
               <tfoot>
               <tr>
                 <th>DNI</th>
                 <th>Nombres y Apellidos</th>
+                <th>Privilegio</th>
                 <th>Telefono</th>
+                <th>Mail</th>
                 <th>Acciones</th>
               </tr>
               </tfoot>
+
             </table>
           </div>
           <!-- /.card-body -->

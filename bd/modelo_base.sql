@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `ubicaBodega`.`tpersona` (
   `persona_nombres` VARCHAR(65) NOT NULL,
   `persona_apaterno` VARCHAR(65) NOT NULL,
   `persona_amaterno` VARCHAR(65) NOT NULL,
-  `persona_nacimiento` DATETIME NULL,
+  `persona_nacimiento` DATE NULL,
   `persona_telefono` VARCHAR(12) NULL,
   `persona_mail` VARCHAR(65) NULL,
   PRIMARY KEY (`persona_dni`))

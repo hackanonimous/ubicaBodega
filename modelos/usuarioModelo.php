@@ -3,7 +3,7 @@
     class usuarioModelo extends mainModel{
         /*modelo agregar persona*/
         protected static function agregar_usuario_modelo($datos){
-            $sql=mainModel::conectar()->prepare("INSER INTO tusuario(usuario_dni,usuario_clave,usuario_estado,usuario_privilegio VALUES(:DNI,:Clave,:Estado,:Privilegio");
+            $sql=mainModel::conectar()->prepare("INSERT INTO tusuario(usuario_dni,usuario_clave,usuario_estado,usuario_privilegio) VALUES(:DNI,:Clave,:Estado,:Privilegio)");
 
             $sql->bindParam(":DNI",$datos['DNI']);
             $sql->bindParam(":Clave",$datos['Clave']);

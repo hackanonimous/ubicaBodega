@@ -8,8 +8,6 @@
 </script>
 <!-- Bootstrap 4 -->
 <script src="<?php echo SERVERURL;?>vistas/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- SweetAlert2 -->
-<script src="<?php echo SERVERURL;?>vistas/plugins/sweetalert2/sweetalert2.min.js"></script>
 <!-- DataTables  & Plugins -->
 <script src="<?php echo SERVERURL;?>vistas/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="<?php echo SERVERURL;?>vistas/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
