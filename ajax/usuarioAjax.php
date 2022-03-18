@@ -1,7 +1,7 @@
 <?php
     $peticionAjax = true;
     require_once "../config/App.php";
-    if (isset($_POST['usuario_dni_reg'])) {
+    if (isset($_POST['usuario_dni_reg']) || isset($_POST['usuario_dni_del'])) {
         /*Instanciamos al controlador*/
         require_once "../controladores/usuarioControlador.php";
         $ins_usuario=new usuarioControlador();
@@ -9,6 +9,11 @@
         /*Agregar un nuevo usuario*/
         if (isset($_POST['usuario_clave_1_reg']) && isset($_POST['usuario_clave_2_reg'])) {
             echo $ins_usuario->agregar_usuario_controlador();
+        }
+
+        /*Eliminar usuario*/
+        if (isset($_POST['usuario_id_del'])) {
+            echo $ins_usuario->eliminar_usuario_controlador();
         }
     }else{
         session_start(['name'=>'SEL']);

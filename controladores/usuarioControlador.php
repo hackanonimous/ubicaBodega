@@ -89,7 +89,7 @@
 
             $tabla="";
 
-            $consulta="SELECT SQL_CALC_FOUND_ROWS usuario_dni,persona_nombres,persona_apaterno,persona_amaterno,usuario_privilegio,persona_telefono,persona_mail FROM tusuario a INNER JOIN tpersona b on a.usuario_dni = b.persona_dni WHERE usuario_dni!='$id'";
+            $consulta="SELECT SQL_CALC_FOUND_ROWS usuario_dni,persona_nombres,persona_apaterno,persona_amaterno,usuario_estado,usuario_privilegio,persona_telefono,persona_mail FROM tusuario a INNER JOIN tpersona b on a.usuario_dni = b.persona_dni WHERE usuario_dni!='$id'";
 
             $conexion=mainModel::conectar();
             $datos=$conexion->query($consulta);
@@ -100,18 +100,29 @@
 
             if($total>=1){
                 foreach ($datos as $rows) {
+                    if ($rows['usuario_estado']==1) {
+                        $estado="Activo";
+                    }else{
+                        $estado="Inactivo";
+                    }
                     $tabla .= '
                     <tr>
                         <td>'.$rows['usuario_dni'].'</td>
                         <td>'.$rows['persona_nombres'].' '.$rows['persona_apaterno'].' '.$rows['persona_amaterno'].'</td>
+                        <td>'.$estado.'</td>
                         <td>'.$rows['usuario_privilegio'].'</td>
                         <td>'.$rows['persona_telefono'].'</td>
                         <td>'.$rows['persona_mail'].'</td>
                         <td>
                             <a href="'.SERVERURL.'usuarioUpdate/'.mainModel::encryption($rows['usuario_dni']).'/" class="btn btn-primary">
-                                <i class="fas           fa-upload">Actualizar</i>
+                                <i class="fas           fa-upload"></i>
                             </a>
-                            <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt">Eliminar</i></button>
+                        </td>
+                        <td>
+                            <form class="FormularioAjax" action="'.SERVERURL.'ajax/usuarioAjax.php" method="POST" data-form="delete">
+                                <input type="hidden" name="usuario_id_del" value="'.mainModel::encryption($rows['usuario_dni']).'">
+                                <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                            </form>
                         </td>
                     </tr>
                     ';
@@ -122,4 +133,69 @@
             return $tabla;
 
          }/*fin de controlador*/
+
+          /*controlador eliminar usuario*/
+          public function eliminar_usuario_controlador(){
+            /* recibiendo id del usuario*/
+            $id=mainModel::decryption($_POST['usuario_id_del']);
+            $id=mainModel::limpiar_cadena($id);
+
+            /*comprobando el usuario en BD*/
+            $check_usuario=mainModel::ejecutar_consulta_simple("SELECT usuario_dni FROM tusuario WHERE usuario_dni='$id'");
+            if($check_usuario->rowCount()<=0){
+                $alerta=[
+                    "Alerta"=>"simple",
+                    "Titulo"=>"Ocurrio un error inesperado",
+                    "Texto"=>"El usuario que intenta eliminar no existe en el sistema",
+                    "tipo"=>"error"
+                ];
+                echo json_encode($alerta);
+                exit();
+            }
+
+            /*comprobando el usuario en BD*/
+            $check_licencia=mainModel::ejecutar_consulta_simple("SELECT licencia_usuario FROM tlicencia WHERE licencia_usuario='$id' LIMIT 1");
+            if($check_licencia->rowCount()>0){
+                $alerta=[
+                    "Alerta"=>"simple",
+                    "Titulo"=>"Ocurrio un error inesperado",
+                    "Texto"=>"No podemos eliminar este usuario debido a que tiene mas de una licencia emitida con este usuario, recomendamos deshabilitar el usuario si ya no sera utilizado",
+                    "tipo"=>"error"
+                ];
+                echo json_encode($alerta);
+                exit();
+            }
+
+            /*comprobando privilegios*/
+            session_start(['name'=>'SEL']);
+            if($_SESSION['privilegio_sel']!=1){
+                $alerta=[
+                    "Alerta"=>"simple",
+                    "Titulo"=>"Ocurrio un error inesperado",
+                    "Texto"=>"No tienes los permisos necesarios para realizar esta operacion",
+                    "tipo"=>"error"
+                ];
+                echo json_encode($alerta);
+                exit();
+            }
+
+            $eliminar_usuario=usuarioModelo::eliminar_usuario_modelo($id);
+            if($eliminar_usuario->rowCount()==1){
+                $alerta=[
+                    "Alerta"=>"recargar",
+                    "Titulo"=>"Usuario eliminado",
+                    "Texto"=>"El usuario ha sido eliminado del sistema exitosamente",
+                    "tipo"=>"success"
+                ];
+            }else{
+                $alerta=[
+                    "Alerta"=>"simple",
+                    "Titulo"=>"Ocurrio un error inesperado",
+                    "Texto"=>"No hemos podido eliminar el usuario, por favor intente nuevamente",
+                    "tipo"=>"error"
+                ];
+            }
+            echo json_encode($alerta);
+
+          }/* fin de controlador */
     }

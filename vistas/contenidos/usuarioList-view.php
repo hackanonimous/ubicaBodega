@@ -37,10 +37,12 @@
               <tr>
                 <th>DNI</th>
                 <th>Nombres y Apellidos</th>
+                <th>Estado</th>
                 <th>Privilegio</th>
                 <th>Telefono</th>
                 <th>Mail</th>
-                <th>Acciones</th>
+                <th>Actualizar</th>
+                <th>Eliminar</th>
               </tr>
               </thead>
 
@@ -58,10 +60,12 @@
               <tr>
                 <th>DNI</th>
                 <th>Nombres y Apellidos</th>
+                <th>Estado</th>
                 <th>Privilegio</th>
                 <th>Telefono</th>
                 <th>Mail</th>
-                <th>Acciones</th>
+                <th>Actualizar</th>
+                <th>Eliminar</th>
               </tr>
               </tfoot>
 

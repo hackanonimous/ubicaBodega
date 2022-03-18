@@ -11,5 +11,14 @@
             $sql->bindParam(":Privilegio",$datos['Privilegio']);
             $sql->execute();
             return $sql;
-        }
+        }/* fin de modelo */
+
+         /*modelo elimar usuario*/
+         protected static function eliminar_usuario_modelo($id){
+             $sql=mainModel::conectar()->prepare("DELETE FROM tusuario WHERE usuario_dni=:ID");
+             $sql->bindParam(":ID",$id);
+             $sql->execute();
+             return $sql;
+
+         }/* fin de modelo */
     }
